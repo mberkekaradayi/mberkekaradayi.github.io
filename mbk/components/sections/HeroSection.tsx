@@ -13,21 +13,25 @@ export function HeroSection() {
       id="home"
       className="relative flex flex-col px-6 md:px-10 pt-[100px] pb-10 max-w-[1100px] mx-auto"
     >
-      {/* Headline */}
+      {/* Headline — strong mobile floor; scales with viewport up to cap */}
       <h1
-        className="font-sans font-light leading-[1.12] max-w-[520px] mb-5"
+        className="font-sans font-light leading-[1.08] max-w-[min(100%,36rem)] mb-5 md:max-w-[min(640px,calc(100vw-80px))]"
         style={{
-          fontSize: "clamp(1.85rem, 3.15vw, 2.65rem)",
+          fontSize: "clamp(2.5rem, 0.65rem + 6.2vw, 3rem)",
           color: "#e8eef6",
           letterSpacing: "-0.02em",
           textWrap: "balance",
         }}
       >
-        Software engineer building{" "}
+        Software engineer
+        <span className="md:hidden"> </span>
+        <br aria-hidden className="hidden md:block" />
+        building{" "}
         <em
           style={{
             fontFamily: "var(--font-instrument-serif), serif",
             fontStyle: "italic",
+            fontSize: "1.05em",
             color: "#4f9cf8",
           }}
         >
@@ -38,27 +42,27 @@ export function HeroSection() {
 
       {/* Sub-headline */}
       <p
-        className="mb-9 max-w-[560px] text-[15px] leading-[1.65]"
+        className="mb-9 max-w-[min(100%,36rem)] text-[16px] leading-[1.7] md:max-w-[560px] md:text-[15px] md:leading-[1.65]"
         style={{ color: "var(--color-p-muted)" }}
       >
         BASc in Electrical Engineering from the University of British Columbia.
-        Currently a Software Engineer at Coinbase, focused on frontend
+        Currently a Software Engineer at Coinbase, focused on software
         architecture, real-time product systems, and AI-assisted engineering
         workflows.
       </p>
 
-      {/* CTAs */}
-      <div className="flex flex-wrap gap-3 mb-8">
+      {/* CTAs — one row at all breakpoints; equal thirds on mobile */}
+      <div className="mb-8 grid min-w-0 w-full grid-cols-3 gap-2 md:gap-3 md:flex md:flex-row md:flex-wrap">
         <a
           href="#experience"
-          className="btn-primary-hover text-[13px] font-medium px-[22px] py-[10px] rounded-[6px] no-underline"
+          className="btn-primary-hover flex min-h-11 min-w-0 items-center justify-center px-1.5 py-2.5 text-center text-[11px] font-medium leading-snug rounded-[6px] no-underline sm:px-2 md:min-h-0 md:px-[22px] md:py-[10px] md:text-[13px]"
           style={{ background: "#4f9cf8", color: "#fff" }}
         >
           View Experience
         </a>
         <a
           href="#projects"
-          className="btn-ghost-hover text-[13px] font-normal px-[22px] py-[10px] rounded-[6px] no-underline"
+          className="btn-ghost-hover flex min-h-11 min-w-0 items-center justify-center px-1.5 py-2.5 text-center text-[11px] font-normal leading-snug rounded-[6px] no-underline sm:px-2 md:min-h-0 md:px-[22px] md:py-[10px] md:text-[13px]"
           style={{
             border: "1px solid rgba(99,143,200,0.22)",
             color: "var(--color-p-muted)",
@@ -69,7 +73,7 @@ export function HeroSection() {
         </a>
         <a
           href="#contact"
-          className="btn-ghost-hover text-[13px] font-normal px-[22px] py-[10px] rounded-[6px] no-underline"
+          className="btn-ghost-hover flex min-h-11 min-w-0 items-center justify-center px-1.5 py-2.5 text-center text-[11px] font-normal leading-snug rounded-[6px] no-underline sm:px-2 md:min-h-0 md:px-[22px] md:py-[10px] md:text-[13px]"
           style={{
             border: "1px solid rgba(99,143,200,0.22)",
             color: "var(--color-p-muted)",
@@ -81,7 +85,7 @@ export function HeroSection() {
       </div>
 
       {/* Supporting detail */}
-      <ul className="m-0 flex max-w-full list-none flex-nowrap gap-[10px] overflow-x-auto overflow-y-hidden p-0 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden">
+      <ul className="m-0 flex w-full min-w-0 max-w-full list-none flex-wrap gap-[10px] p-0">
         {heroBadges.map((badge) => (
           <li key={badge} className="shrink-0">
             <Pill label={badge} variant="badge" />

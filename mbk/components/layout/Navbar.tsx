@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { navLinks } from "@/lib/data/navigation";
-import { Menu, X } from "lucide-react";
+import { CloseIcon, MenuIcon } from "@/components/ui/NavIcons";
 
 const MOBILE_NAV_ID = "mobile-primary-nav";
 
@@ -123,7 +123,7 @@ export function Navbar() {
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
         >
-          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          {mobileOpen ? <CloseIcon size={22} /> : <MenuIcon size={22} />}
         </button>
       </nav>
 

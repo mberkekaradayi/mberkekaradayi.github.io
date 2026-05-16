@@ -2,7 +2,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Pill } from "@/components/ui/Pill";
 import { GithubBrandIcon } from "@/components/ui/BrandIcons";
 import { projects } from "@/lib/data/projects";
-import { ExternalLink } from "lucide-react";
+import { ExternalLinkIcon } from "@/components/ui/NavIcons";
 
 export function ProjectsSection() {
   return (
@@ -83,12 +83,7 @@ export function ProjectsSection() {
                   className="project-link-hover font-mono text-[11px] no-underline flex items-center gap-1.5"
                   style={{ color: "#38d9c4" }}
                 >
-                  <ExternalLink
-                    size={14}
-                    strokeWidth={1.75}
-                    className="shrink-0"
-                    aria-hidden
-                  />
+                  <ExternalLinkIcon size={14} className="shrink-0" />
                   Live demo
                 </a>
               )}
