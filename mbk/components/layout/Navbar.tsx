@@ -90,7 +90,7 @@ export function Navbar() {
       >
         <a
           href="#home"
-          className="min-w-0 flex-1 pr-3 font-sans text-[11.5px] font-medium leading-snug tracking-tight no-underline truncate sm:text-[12px] sm:flex-initial md:text-[13px] md:overflow-visible md:whitespace-normal md:pr-6"
+          className="min-w-0 flex-1 pr-3 font-sans text-[14px] font-medium leading-snug tracking-tight no-underline truncate sm:flex-initial md:text-[13px] md:overflow-visible md:whitespace-normal md:pr-6"
           title="Mehmet Berke Karadayi"
           style={{ color: "#7ab8fb" }}
         >
