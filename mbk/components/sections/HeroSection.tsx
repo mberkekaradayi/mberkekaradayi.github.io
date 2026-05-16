@@ -17,7 +17,6 @@ export function HeroSection() {
       className="relative mx-auto max-w-[1100px] px-6 pb-10 pt-[100px] md:px-10"
     >
       <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-[minmax(0,1fr)_minmax(300px,0.92fr)] md:gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,1fr)] lg:gap-10">
-        {/* Copy */}
         <div className="min-w-0">
           <h1
             className="mb-5 max-w-[34rem] font-sans text-[clamp(2.25rem,0.5rem+5.5vw,2.75rem)] font-light leading-[1.12] tracking-[-0.02em] [text-wrap:balance]"
@@ -45,7 +44,7 @@ export function HeroSection() {
             and AI-assisted engineering workflows.
           </p>
 
-          <div className="mb-8 grid min-w-0 w-full grid-cols-3 gap-2 md:max-w-[32rem] md:flex md:flex-row md:flex-wrap md:gap-3">
+          <div className="grid min-w-0 w-full grid-cols-3 gap-2 md:max-w-[32rem] md:flex md:flex-row md:flex-wrap md:gap-3">
             <a
               href="#experience"
               className="btn-primary-hover flex min-h-11 min-w-0 items-center justify-center rounded-[6px] px-1.5 py-2.5 text-center text-[11px] font-medium leading-snug no-underline sm:px-2 md:min-h-0 md:px-[22px] md:py-[10px] md:text-[13px]"
@@ -76,19 +75,17 @@ export function HeroSection() {
               Contact
             </a>
           </div>
+        </div>
 
-          <ul className="m-0 flex w-full min-w-0 max-w-full list-none flex-wrap gap-2 p-0 md:max-w-[32rem]">
+        <div className="flex w-full min-w-0 flex-col gap-3 md:sticky md:top-[76px]">
+          <TerminalAnimation className="mx-auto max-w-md md:mx-0 md:max-w-none" />
+          <ul className="m-0 flex w-full min-w-0 list-none flex-wrap justify-center gap-2 p-0 md:justify-start">
             {heroBadges.map((badge) => (
               <li key={badge} className="shrink-0">
                 <Pill label={badge} variant="badge" />
               </li>
             ))}
           </ul>
-        </div>
-
-        {/* Terminal — fills the right column on md+ */}
-        <div className="w-full min-w-0 md:sticky md:top-[76px]">
-          <TerminalAnimation className="mx-auto max-w-md md:mx-0 md:max-w-none" />
         </div>
       </div>
     </section>
