@@ -90,8 +90,8 @@ export function ContactSection() {
             className="text-[11px] leading-snug tracking-normal"
             style={{ color: "var(--color-p-muted)" }}
           >
-            &copy; <span suppressHydrationWarning>{year}</span> Berke Karadayi.
-            All rights reserved.
+            &copy; <span suppressHydrationWarning>{year}</span> Mehmet Berke
+            Karadayi. All rights reserved.
           </p>
         </div>
       </div>
