@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+# Blocks push to main when mbk lint or typecheck fails.
+# Enable once per clone: ./scripts/install-git-hooks.sh
+
+set -e
+
+ROOT="$(git rev-parse --show-toplevel)"
+MBK="$ROOT/mbk"
+
+push_to_main=false
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+  if [[ "$remote_ref" == "refs/heads/main" ]]; then
+    push_to_main=true
+  fi
+done
+
+if [[ "$push_to_main" != "true" ]]; then
+  exit 0
+fi
+
+if [[ ! -f "$MBK/package.json" ]]; then
+  echo "pre-push: mbk/ not found, skipping checks." >&2
+  exit 0
+fi
+
+echo ""
+echo "▶ Push to main — running mbk lint and typecheck..."
+echo ""
+
+cd "$MBK"
+
+if ! command -v npm >/dev/null 2>&1; then
+  echo "✗ npm not found. Install Node.js or fix PATH." >&2
+  exit 1
+fi
+
+if [[ ! -d node_modules ]]; then
+  echo "▶ Installing dependencies (npm ci)..."
+  npm ci
+fi
+
+npm run lint
+npm run typecheck
+
+echo ""
+echo "✓ Lint and typecheck passed. Continuing push to main."
+echo ""
+
+exit 0
