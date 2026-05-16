@@ -1,92 +1,31 @@
-export interface SkillGroup {
+export interface Capability {
   title: string;
-  description: string;
-  skills: string[];
+  items: string;
 }
 
-export const skillGroups: SkillGroup[] = [
+export const capabilities: Capability[] = [
   {
-    title: "Frontend Systems",
-    description:
-      "Product-grade interfaces built with typed, reusable, and maintainable software architecture.",
-    skills: [
-      "React",
-      "TypeScript",
-      "Next.js",
-      "React Native",
-      "Relay",
-      "GraphQL",
-      "Tailwind CSS",
-    ],
+    title: "Frontend Architecture",
+    items: "React, TypeScript, Next.js, Relay, GraphQL",
   },
   {
-    title: "Real-Time Product Interfaces",
-    description:
-      "Interactive product experiences for live data, stateful workflows, and complex user interactions.",
-    skills: [
-      "WebSockets",
-      "Redux",
-      "Real-Time Workflows",
-      "Data-Heavy UX",
-      "Performance Optimization",
-      "Client-Side Data Flows",
-    ],
+    title: "Real-Time Systems",
+    items: "WebSockets, Redux, data-heavy interfaces",
   },
   {
-    title: "AI Automation",
-    description:
-      "LLM-powered tooling for developer productivity, workflow automation, and structured outputs.",
-    skills: [
-      "LLM Integrations",
-      "Prompt Engineering",
-      "Structured Outputs",
-      "MCPs",
-      "Workflow Automation",
-      "OpenAI API",
-      "Claude API",
-    ],
+    title: "AI-Assisted Engineering",
+    items: "LLM integrations, structured outputs, workflow automation",
   },
   {
-    title: "Backend & Infrastructure",
-    description:
-      "Backend services and cloud infrastructure supporting full-stack product workflows.",
-    skills: [
-      "Node.js",
-      "Express.js",
-      "Django",
-      "Django REST Framework",
-      "PostgreSQL",
-      "AWS",
-      "SQS",
-      "S3",
-      "RDS",
-    ],
+    title: "Backend Services",
+    items: "Node.js, Go, Django, PostgreSQL, AWS",
   },
   {
-    title: "Quality & Reliability",
-    description:
-      "Reliable systems through testing, validation, fallbacks, and production-aware engineering.",
-    skills: [
-      "Jest",
-      "React Testing Library",
-      "Schema Validation",
-      "Deterministic Fallbacks",
-      "CI/CD",
-      "Alerting Workflows",
-      "Incident Response",
-    ],
+    title: "Reliability",
+    items: "Testing, validation, fallbacks, CI/CD",
   },
   {
     title: "Product Engineering",
-    description:
-      "Turning ambiguous requirements into polished, user-focused product experiences.",
-    skills: [
-      "Product Thinking",
-      "Cross-Functional Collaboration",
-      "UX Quality",
-      "Analytics",
-      "A/B Testing",
-      "Technical Ownership",
-    ],
+    items: "Technical ownership, UX quality, cross-functional delivery",
   },
 ];

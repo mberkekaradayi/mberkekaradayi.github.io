@@ -92,11 +92,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${dmSans.variable} ${dmMono.variable} ${instrumentSerif.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
+    <html lang="en" className="h-full" suppressHydrationWarning>
+      <body
+        className={`${dmSans.variable} ${dmMono.variable} ${instrumentSerif.variable} min-h-full flex flex-col antialiased`}
+      >
         <a href="#main" className="skip-link">
           Skip to main content
         </a>

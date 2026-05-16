@@ -12,7 +12,7 @@ export const projects: Project[] = [
     type: "AI Product Engineering",
     title: "ResumeFit Agent",
     description:
-      "LLM-powered resume-to-role fit evaluator built with Next.js and TypeScript. Compares resume and job-description signals, returns structured fit assessments, and uses schema validation, timeout handling, and heuristic fallbacks for reliability.",
+      "LLM-powered resume-to-role fit evaluator with structured assessments, schema validation, and reliability fallbacks.",
     tech: ["Next.js", "TypeScript", "OpenAI API", "Structured Outputs", "Zod"],
     githubUrl: "https://github.com/mberkekaradayi/ResumeFit-Agent",
   },
@@ -20,7 +20,7 @@ export const projects: Project[] = [
     type: "Full-Stack · Simulation",
     title: "Energy Simulation Tool",
     description:
-      "Full-stack renewable energy simulation platform for solar, wind, and hydro analysis. Built real-time calculation workflows, automated PDF exports, and an AI-assisted technical layer for interpreting simulation outputs.",
+      "Renewable energy simulation platform with real-time calculations, PDF exports, and AI-assisted output interpretation.",
     tech: ["React", "Flask", "Python", "PDF Generation", "CI/CD", "REST APIs"],
     githubUrl: "https://github.com/puneetchopra25/Capstone_WebsiteApp",
   },
@@ -28,7 +28,7 @@ export const projects: Project[] = [
     type: "Crypto · Product Interface",
     title: "Web3 Portfolio Dashboard",
     description:
-      "Wallet-connected portfolio dashboard for exploring token holdings on Base. Built with Next.js, OnchainKit, and Alchemy SDK, with sortable tables, pagination, skeleton loading, and dark-mode-first data views.",
+      "Wallet-connected portfolio dashboard for Base token holdings with sortable tables, pagination, and dark-mode data views.",
     tech: [
       "Next.js",
       "OnchainKit",

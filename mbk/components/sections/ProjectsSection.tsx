@@ -1,5 +1,4 @@
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Pill } from "@/components/ui/Pill";
 import { GithubBrandIcon } from "@/components/ui/BrandIcons";
 import { projects } from "@/lib/data/projects";
 import { ExternalLinkIcon } from "@/components/ui/NavIcons";
@@ -8,59 +7,55 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="max-w-[1100px] mx-auto px-6 md:px-10 py-14"
+      className="max-w-[1100px] mx-auto px-6 md:px-10 py-12 md:py-14"
     >
       <SectionHeader
         label="Projects"
-        title="Featured work"
-        subtitle="Selected technical projects across AI product engineering, full-stack systems, and crypto interfaces."
+        title="Selected work"
+        subtitle="A few technical projects—concise snapshots, not full case studies."
       />
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="mt-8 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
-          <div
+          <article
             key={project.title}
-            className="card-lift flex flex-col rounded-[12px] p-8"
+            className="card-lift flex flex-col rounded-[8px] px-5 py-5"
             style={{
-              background: "#0b1628",
-              border: "1px solid rgba(99,143,200,0.12)",
+              background: "rgba(11, 22, 40, 0.45)",
+              border: "1px solid rgba(99,143,200,0.09)",
             }}
           >
-            {/* Type */}
             <p
-              className="font-mono text-[10px] uppercase tracking-[0.12em] mb-3"
+              className="mb-2 font-mono text-[10px] uppercase tracking-[0.12em]"
               style={{ color: "#8b7cf8" }}
             >
               {project.type}
             </p>
 
-            {/* Title */}
             <h3
-              className="text-[1.15rem] font-medium tracking-[-0.01em] leading-[1.3] mb-3"
+              className="mb-2 text-[1.05rem] font-medium leading-[1.3] tracking-[-0.01em]"
               style={{ color: "#e8eef6" }}
             >
               {project.title}
             </h3>
 
-            {/* Description */}
             <p
-              className="text-[13.5px] leading-[1.65] mb-6 flex-1"
+              className="mb-4 flex-1 text-[13px] leading-[1.6]"
               style={{ color: "var(--color-p-muted)" }}
             >
               {project.description}
             </p>
 
-            {/* Tech pills */}
-            <div className="flex flex-wrap gap-[6px] mb-5">
-              {project.tech.map((t) => (
-                <Pill key={t} label={t} variant="tech" />
-              ))}
-            </div>
+            <p
+              className="mb-4 font-mono text-[10px] leading-relaxed tracking-[0.02em]"
+              style={{ color: "rgba(170, 191, 212, 0.7)" }}
+            >
+              {project.tech.join(" · ")}
+            </p>
 
-            {/* Footer links */}
             <div
-              className="flex items-center justify-between pt-5 mt-auto gap-3 flex-wrap"
-              style={{ borderTop: "1px solid rgba(99,143,200,0.12)" }}
+              className="mt-auto flex flex-wrap items-center gap-4 pt-3"
+              style={{ borderTop: "1px solid rgba(99,143,200,0.08)" }}
             >
               {project.githubUrl && (
                 <a
@@ -68,11 +63,11 @@ export function ProjectsSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${project.title}: view source on GitHub`}
-                  className="project-link-hover font-mono text-[11px] no-underline flex items-center gap-1.5"
+                  className="project-link-hover flex items-center gap-1.5 font-mono text-[11px] no-underline"
                   style={{ color: "#4f9cf8" }}
                 >
                   <GithubBrandIcon size={14} className="shrink-0" />
-                  View on GitHub
+                  GitHub
                 </a>
               )}
               {project.liveUrl && (
@@ -80,7 +75,7 @@ export function ProjectsSection() {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="project-link-hover font-mono text-[11px] no-underline flex items-center gap-1.5"
+                  className="project-link-hover flex items-center gap-1.5 font-mono text-[11px] no-underline"
                   style={{ color: "#38d9c4" }}
                 >
                   <ExternalLinkIcon size={14} className="shrink-0" />
@@ -88,7 +83,7 @@ export function ProjectsSection() {
                 </a>
               )}
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>

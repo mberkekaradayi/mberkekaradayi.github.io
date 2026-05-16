@@ -1,52 +1,60 @@
 import Image from "next/image";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Pill } from "@/components/ui/Pill";
 import { experiences } from "@/lib/data/experience";
+
+function TechRow({ items }: { items: string[] }) {
+  return (
+    <p
+      className="m-0 font-mono text-[10px] leading-relaxed tracking-[0.02em]"
+      style={{ color: "rgba(170, 191, 212, 0.75)" }}
+    >
+      {items.join(" · ")}
+    </p>
+  );
+}
 
 export function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="max-w-[1100px] mx-auto px-6 md:px-10 py-14"
+      className="max-w-[1100px] mx-auto px-6 md:px-10 py-12 md:py-14"
     >
       <SectionHeader
         label="Experience"
         title="Professional history"
-        subtitle="Three production environments. Frontend, full-stack, desktop engineering, and AI-assisted automation."
+        subtitle="Structured proof across frontend, full-stack, desktop, and AI-assisted engineering."
       />
 
-      <div className="mt-10 flex flex-col gap-3">
+      <div className="mt-8 flex flex-col gap-2.5">
         {experiences.map((exp) => (
-          <div
+          <article
             key={exp.company}
-            className="card-hover rounded-[10px] p-7 cursor-default"
+            className="card-hover rounded-[8px] px-5 py-5 md:px-6 md:py-5 cursor-default"
             style={{
-              background: "#0b1628",
-              border: "1px solid rgba(99,143,200,0.12)",
+              background: "rgba(11, 22, 40, 0.55)",
+              border: "1px solid rgba(99,143,200,0.1)",
             }}
           >
-            {/* Header row */}
-            <div className="flex justify-between items-start gap-4 mb-3 flex-wrap">
-              <div className="flex items-start gap-4">
-                {/* Company logo */}
+            <div className="mb-2.5 flex flex-wrap items-start justify-between gap-3">
+              <div className="flex items-start gap-3">
                 <a
                   href={exp.companyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${exp.company} website`}
-                  className="shrink-0 rounded-lg overflow-hidden border"
+                  className="shrink-0 overflow-hidden rounded-md border"
                   style={{
-                    borderColor: "rgba(99,143,200,0.18)",
-                    background: "rgba(79,156,248,0.05)",
+                    borderColor: "rgba(99,143,200,0.14)",
+                    background: "rgba(79,156,248,0.04)",
                   }}
                 >
                   <Image
                     src={exp.companyLogo}
                     alt={exp.company}
-                    width={40}
-                    height={40}
-                    className="block size-10 rounded-[7px]"
-                    sizes="40px"
+                    width={36}
+                    height={36}
+                    className="block size-9 rounded-[6px]"
+                    sizes="36px"
                   />
                 </a>
                 <div>
@@ -54,13 +62,13 @@ export function ExperienceSection() {
                     href={exp.companyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="nav-link-hover font-mono text-[13px] font-medium tracking-[0.02em] mb-1 inline-block no-underline"
+                    className="nav-link-hover mb-0.5 inline-block font-mono text-[13px] font-medium tracking-[0.02em] no-underline"
                     style={{ color: "#e8eef6" }}
                   >
                     {exp.company} ↗
                   </a>
                   <p
-                    className="text-[12px] font-mono tracking-[0.06em] uppercase"
+                    className="text-[11px] font-mono tracking-[0.06em] uppercase"
                     style={{ color: "#4f9cf8" }}
                   >
                     {exp.role}
@@ -68,41 +76,34 @@ export function ExperienceSection() {
                 </div>
               </div>
               <p
-                className="font-mono text-[11px] pt-[2px] whitespace-nowrap"
+                className="font-mono text-[11px] whitespace-nowrap pt-0.5"
                 style={{ color: "var(--color-p-muted)" }}
               >
                 {exp.dates}
               </p>
             </div>
 
-            {/* Summary */}
             <p
-              className="text-[13.5px] leading-[1.65] mb-4 max-w-[680px]"
+              className="mb-3 max-w-[680px] text-[13px] leading-[1.6]"
               style={{ color: "var(--color-p-muted)" }}
             >
               {exp.summary}
             </p>
 
-            {/* Bullets (native markers for predictable rendering across clients) */}
-            <ul className="mb-4 list-outside list-disc space-y-[6px] pl-6 marker:text-[#4f9cf8]">
-              {exp.bullets.map((bullet, i) => (
+            <ul className="mb-3.5 list-outside list-disc space-y-1 pl-5 marker:text-[#4f9cf8]/80">
+              {exp.bullets.map((bullet) => (
                 <li
-                  key={i}
-                  className="text-[13px] leading-[1.55] ps-1"
-                  style={{ color: "#e8eef6" }}
+                  key={bullet}
+                  className="text-[12.5px] leading-[1.55] ps-0.5"
+                  style={{ color: "rgba(232, 238, 246, 0.92)" }}
                 >
                   {bullet}
                 </li>
               ))}
             </ul>
 
-            {/* Tech pills */}
-            <div className="flex flex-wrap gap-[6px]">
-              {exp.tech.map((t) => (
-                <Pill key={t} label={t} variant="tech" />
-              ))}
-            </div>
-          </div>
+            <TechRow items={exp.tech} />
+          </article>
         ))}
       </div>
     </section>

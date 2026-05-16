@@ -1,49 +1,41 @@
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Pill } from "@/components/ui/Pill";
-import { skillGroups } from "@/lib/data/skills";
+import { capabilities } from "@/lib/data/skills";
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="max-w-[1100px] mx-auto px-6 md:px-10 py-14">
+    <section
+      id="skills"
+      className="max-w-[1100px] mx-auto px-6 md:px-10 py-12 md:pb-16"
+    >
       <SectionHeader
         label="Engineering Focus"
         title="How I build"
-        subtitle="Across software architecture, real-time product workflows, AI-assisted automation, backend services, and reliability-focused engineering."
-        subtitleClassName="max-w-[42rem]"
+        subtitle="Capabilities across architecture, real-time systems, AI-assisted workflows, and product delivery."
+        subtitleClassName="max-w-[40rem]"
       />
 
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {skillGroups.map((group) => (
+      <div
+        className="mt-8 grid grid-cols-1 sm:grid-cols-2 sm:gap-x-14 lg:gap-x-20"
+        style={{ borderTop: "1px solid rgba(99,143,200,0.12)" }}
+      >
+        {capabilities.map((cap) => (
           <div
-            key={group.title}
-            className="skill-hover flex h-full flex-col rounded-[10px] p-6"
-            style={{
-              background: "#0b1628",
-              border: "1px solid rgba(99,143,200,0.12)",
-            }}
+            key={cap.title}
+            className="py-4 sm:py-[18px]"
+            style={{ borderBottom: "1px solid rgba(99,143,200,0.12)" }}
           >
-            {/* Card title (mono accent) */}
-            <div
-              className="mb-3 shrink-0 font-mono text-[11px] font-medium uppercase tracking-[0.08em]"
-              style={{ color: "#38d9c4" }}
-            >
-              {group.title}
-            </div>
-
-            {/* One-line engineering focus */}
             <p
-              className="mb-5 flex-1 text-[13px] leading-[1.55]"
+              className="mb-1.5 font-mono text-[10px] font-medium uppercase tracking-[0.1em]"
+              style={{ color: "#4f9cf8" }}
+            >
+              {cap.title}
+            </p>
+            <p
+              className="text-[13px] leading-[1.55]"
               style={{ color: "var(--color-p-muted)" }}
             >
-              {group.description}
+              {cap.items}
             </p>
-
-            {/* Skill pills */}
-            <div className="mt-auto flex flex-wrap gap-[6px]">
-              {group.skills.map((skill) => (
-                <Pill key={skill} label={skill} variant="skill" />
-              ))}
-            </div>
           </div>
         ))}
       </div>

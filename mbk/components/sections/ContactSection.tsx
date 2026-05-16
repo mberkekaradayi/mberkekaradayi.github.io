@@ -19,6 +19,8 @@ const contactLinks = [
 ] as const;
 
 export function ContactSection() {
+  const year = new Date().getFullYear();
+
   return (
     <footer
       id="contact"
@@ -88,11 +90,8 @@ export function ContactSection() {
             className="text-[11px] leading-snug tracking-normal"
             style={{ color: "var(--color-p-muted)" }}
           >
-            &copy;{" "}
-            <span suppressHydrationWarning>
-              {new Date().getFullYear()}
-            </span>{" "}
-            Mehmet Berke Karadayi. All rights reserved.
+            &copy; <span suppressHydrationWarning>{year}</span> Berke Karadayi.
+            All rights reserved.
           </p>
         </div>
       </div>

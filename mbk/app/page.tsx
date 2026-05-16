@@ -8,7 +8,7 @@ import { ContactSection } from "@/components/sections/ContactSection";
 
 const Divider = () => (
   <div
-    className="max-w-[1100px] mx-auto shrink-0 px-6 md:px-10 py-3 md:py-4"
+    className="max-w-[1100px] mx-auto shrink-0 px-6 md:px-10 py-2 md:py-3"
     aria-hidden="true"
   >
     <div
