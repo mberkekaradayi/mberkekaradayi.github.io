@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { cn } from "@/lib/utils";
 
 const TERMINAL_LINES = [
   "$ git push origin feat/system-update",
@@ -69,7 +70,11 @@ function TerminalLine({ text }: { text: string }) {
   return <span style={{ color: "#4a6080" }}>{text}</span>;
 }
 
-export function TerminalAnimation() {
+type TerminalAnimationProps = {
+  className?: string;
+};
+
+export function TerminalAnimation({ className }: TerminalAnimationProps) {
   const bodyRef = useRef<HTMLDivElement>(null);
   const [visibleCount, setVisibleCount] = useState(0);
   const [cycle, setCycle] = useState(0);
@@ -139,9 +144,13 @@ export function TerminalAnimation() {
 
   return (
     <div
-      className="w-full max-w-md overflow-hidden rounded-[11px]"
+      className={cn(
+        "w-full max-w-md overflow-hidden rounded-[11px]",
+        className,
+      )}
       style={{ border: "1px solid rgba(79,156,248,0.18)" }}
-      aria-hidden
+      role="img"
+      aria-label="Animated deploy workflow in a terminal window"
     >
       <header
         className="flex items-center gap-2 px-3.5 py-2.5"
