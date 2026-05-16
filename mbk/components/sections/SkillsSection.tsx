@@ -4,14 +4,11 @@ import { skillGroups } from "@/lib/data/skills";
 
 export function SkillsSection() {
   return (
-    <section
-      id="skills"
-      className="max-w-[1100px] mx-auto px-6 md:px-10 py-14"
-    >
+    <section id="skills" className="max-w-[1100px] mx-auto px-6 md:px-10 py-14">
       <SectionHeader
         label="Engineering Focus"
         title="How I build"
-        subtitle="Across frontend architecture, real-time product workflows, AI-assisted automation, backend services, and reliability-focused engineering."
+        subtitle="Across software architecture, real-time product workflows, AI-assisted automation, backend services, and reliability-focused engineering."
         subtitleClassName="max-w-[42rem]"
       />
 

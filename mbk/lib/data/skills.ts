@@ -8,7 +8,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Frontend Systems",
     description:
-      "Product-grade interfaces built with typed, reusable, and maintainable frontend architecture.",
+      "Product-grade interfaces built with typed, reusable, and maintainable software architecture.",
     skills: [
       "React",
       "TypeScript",

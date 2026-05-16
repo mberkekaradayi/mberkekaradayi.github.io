@@ -3,7 +3,7 @@ import { ImageResponse } from "next/og";
 export const dynamic = "force-static";
 
 export const alt =
-  "Mehmet Berke Karadayi · Software Engineer — frontend architecture and real-time product systems.";
+  "Mehmet Berke Karadayi · Software Engineer at Coinbase. Software architecture, real-time systems, AI-assisted workflows, product-quality software.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -44,8 +44,8 @@ export default function Image() {
           lineHeight: 1.45,
         }}
       >
-        Frontend architecture, real-time product systems, and AI-assisted
-        engineering workflows.
+        Focused on software architecture, real-time product systems, AI-assisted
+        workflows, and product-quality software.
       </div>
     </div>,
     { ...size },

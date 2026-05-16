@@ -42,7 +42,7 @@ export function ExperienceSection() {
                 >
                   <Image
                     src={exp.companyLogo}
-                    alt={`${exp.company} logo`}
+                    alt={exp.company}
                     width={40}
                     height={40}
                     className="block size-10 rounded-[7px]"
@@ -83,21 +83,14 @@ export function ExperienceSection() {
               {exp.summary}
             </p>
 
-            {/* Bullets */}
-            <ul className="flex flex-col gap-[6px] mb-4 list-none p-0 m-0">
+            {/* Bullets (native markers for predictable rendering across clients) */}
+            <ul className="mb-4 list-outside list-disc space-y-[6px] pl-6 marker:text-[#4f9cf8]">
               {exp.bullets.map((bullet, i) => (
                 <li
                   key={i}
-                  className="text-[13px] leading-[1.55] pl-4 relative"
+                  className="text-[13px] leading-[1.55] ps-1"
                   style={{ color: "#e8eef6" }}
                 >
-                  <span
-                    className="absolute left-0 top-[3px] text-[11px]"
-                    style={{ color: "#4f9cf8" }}
-                    aria-hidden="true"
-                  >
-                    -
-                  </span>
                   {bullet}
                 </li>
               ))}

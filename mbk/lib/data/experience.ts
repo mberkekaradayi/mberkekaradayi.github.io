@@ -13,15 +13,17 @@ export const experiences: ExperienceEntry[] = [
   {
     company: "Coinbase",
     companyUrl: "https://www.coinbase.com/home",
-    companyLogo: "https://www.google.com/s2/favicons?domain=coinbase.com&sz=128",
+    companyLogo:
+      "https://www.google.com/s2/favicons?domain=coinbase.com&sz=128",
     role: "Software Engineer",
     dates: "June 2025 - Present",
     summary:
       "Building production-grade frontend systems across trading workflows, real-time product interfaces, reliability tooling, and AI-assisted engineering automation.",
     bullets: [
-      "Owned frontend architecture for trading workflows from MVP through production, partnering closely on React, TypeScript, and GraphQL/Relay integration.",
+      "Owned software architecture for trading workflows from MVP through production, building React, TypeScript, and GraphQL/Relay systems.",
       "Built real-time product systems with WebSockets, Redux, and GraphQL, with a focus on scalable state management and maintainable UI architecture.",
       "Developed AI-assisted tooling for release automation, on-call triage, debugging, and incident-response workflows.",
+      "Collaborated cross-functionally to ship iterative trading releases with rollout safety, telemetry, and regression coverage tuned for production readiness.",
     ],
     tech: [
       "React",

@@ -156,6 +156,12 @@
     overflow-x: hidden;
     font-family: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   }
+
+  :where(a, button, input, textarea, select):focus-visible {
+    outline: 2px solid #4f9cf8;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 }
 
 /* Grid background overlay */

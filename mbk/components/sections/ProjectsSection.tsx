@@ -67,13 +67,11 @@ export function ProjectsSection() {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`${project.title}: view source on GitHub`}
                   className="project-link-hover font-mono text-[11px] no-underline flex items-center gap-1.5"
                   style={{ color: "#4f9cf8" }}
                 >
-                  <GithubBrandIcon
-                    size={14}
-                    className="shrink-0"
-                  />
+                  <GithubBrandIcon size={14} className="shrink-0" />
                   View on GitHub
                 </a>
               )}
@@ -85,7 +83,12 @@ export function ProjectsSection() {
                   className="project-link-hover font-mono text-[11px] no-underline flex items-center gap-1.5"
                   style={{ color: "#38d9c4" }}
                 >
-                  <ExternalLink size={14} strokeWidth={1.75} className="shrink-0" aria-hidden />
+                  <ExternalLink
+                    size={14}
+                    strokeWidth={1.75}
+                    className="shrink-0"
+                    aria-hidden
+                  />
                   Live demo
                 </a>
               )}

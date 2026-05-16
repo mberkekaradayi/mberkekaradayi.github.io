@@ -10,14 +10,13 @@ const sidebarItems = [
   {
     icon: "BSc",
     title: "University of British Columbia",
-    description:
-      "Bachelor of Applied Science in Electrical Engineering.",
+    description: "Bachelor of Applied Science in Electrical Engineering.",
   },
   {
     icon: "→",
     title: "Engineering Interests",
     description:
-      "Frontend architecture, real-time systems, AI-assisted engineering workflows, developer tooling, and product reliability.",
+      "Software architecture, real-time systems, AI-assisted engineering workflows, developer tooling, and product reliability.",
   },
 ];
 
@@ -25,11 +24,11 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="max-w-[1100px] mx-auto px-6 md:px-10 py-14"
+      className="max-w-[1100px] mx-auto scroll-mt-[72px] px-6 md:px-10 pt-6 pb-14 md:pt-8"
     >
-      <SectionHeader label="About" title="Engineering background" />
+      <SectionHeader label="About" title="Background" compact />
 
-      <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div className="mt-6 grid grid-cols-1 gap-12 md:gap-14 lg:grid-cols-2 lg:gap-16 lg:items-start">
         {/* Text block */}
         <div className="flex flex-col gap-5 max-w-[560px]">
           <p
@@ -37,17 +36,17 @@ export function AboutSection() {
             style={{ color: "var(--color-p-muted)" }}
           >
             I&apos;m Mehmet Berke Karadayi, a Software Engineer at Coinbase and
-            an Electrical Engineering graduate from the University of British Columbia, focused on
-            building reliable product systems across frontend, full-stack,
-            real-time, and AI-assisted workflows.
+            an Electrical Engineering graduate from the University of British
+            Columbia, focused on building reliable product systems across
+            frontend, full-stack, real-time, and AI-assisted workflows.
           </p>
           <p
             className="text-[15px] leading-[1.75]"
             style={{ color: "var(--color-p-muted)" }}
           >
-            My work spans React, TypeScript, GraphQL/Relay, WebSockets,
-            backend services, and LLM-powered tooling. I&apos;m especially
-            interested in applying AI to improve engineering workflows, developer
+            My work spans React, TypeScript, GraphQL/Relay, WebSockets, backend
+            services, and LLM-powered tooling. I&apos;m especially interested in
+            applying AI to improve engineering workflows, developer
             productivity, and product experiences.
           </p>
           <p

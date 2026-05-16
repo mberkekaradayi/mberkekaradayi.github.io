@@ -1,45 +1,29 @@
 import { Pill } from "@/components/ui/Pill";
 
 const heroBadges = [
-  "React · TypeScript · GraphQL/Relay",
-  "WebSockets · Real-Time Systems",
-  "Next.js · Full-Stack Workflows",
-  "LLM Tooling · AI Automation",
+  "Software architecture",
+  "Real-time interfaces",
+  "AI-assisted workflows",
+  "Full-stack engineering",
 ];
 
 export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center px-6 md:px-10 pt-[100px] pb-[40px] max-w-[1100px] mx-auto"
+      className="relative flex flex-col px-6 md:px-10 pt-[100px] pb-10 max-w-[1100px] mx-auto"
     >
-      {/* Role tag */}
-      <div
-        className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.1em] uppercase px-3 py-[5px] rounded-[4px] mb-8 w-fit"
-        style={{
-          color: "#38d9c4",
-          border: "1px solid rgba(56,217,196,0.2)",
-          background: "rgba(56,217,196,0.05)",
-        }}
-      >
-        <span
-          className="w-[6px] h-[6px] rounded-full pulse-dot shrink-0"
-          style={{ background: "#38d9c4" }}
-        />
-        Software Engineer · Coinbase
-      </div>
-
       {/* Headline */}
       <h1
-        className="font-sans font-light leading-[1.15] max-w-[640px] mb-6"
+        className="font-sans font-light leading-[1.12] max-w-[520px] mb-5"
         style={{
-          fontSize: "clamp(2rem, 4vw, 3.1rem)",
+          fontSize: "clamp(1.85rem, 3.15vw, 2.65rem)",
           color: "#e8eef6",
           letterSpacing: "-0.02em",
           textWrap: "balance",
         }}
       >
-        Software engineer focused on{" "}
+        Software engineer building{" "}
         <em
           style={{
             fontFamily: "var(--font-instrument-serif), serif",
@@ -47,23 +31,24 @@ export function HeroSection() {
             color: "#4f9cf8",
           }}
         >
-          frontend systems,
-        </em>{" "}
-        real-time interfaces, and AI tooling.
+          reliable product systems
+        </em>
+        .
       </h1>
 
       {/* Sub-headline */}
       <p
-        className="mb-10 max-w-[560px] text-[15px] leading-[1.65]"
+        className="mb-9 max-w-[560px] text-[15px] leading-[1.65]"
         style={{ color: "var(--color-p-muted)" }}
       >
         BASc in Electrical Engineering from the University of British Columbia.
-        Currently a Software Engineer at Coinbase, focused on frontend architecture,
-        real-time product systems, and AI-assisted engineering workflows.
+        Currently a Software Engineer at Coinbase, focused on frontend
+        architecture, real-time product systems, and AI-assisted engineering
+        workflows.
       </p>
 
       {/* CTAs */}
-      <div className="flex flex-wrap gap-3 mb-14">
+      <div className="flex flex-wrap gap-3 mb-8">
         <a
           href="#experience"
           className="btn-primary-hover text-[13px] font-medium px-[22px] py-[10px] rounded-[6px] no-underline"
@@ -95,12 +80,14 @@ export function HeroSection() {
         </a>
       </div>
 
-      {/* Technical badges */}
-      <div className="flex flex-wrap gap-[10px]">
+      {/* Supporting detail */}
+      <ul className="m-0 flex max-w-full list-none flex-nowrap gap-[10px] overflow-x-auto overflow-y-hidden p-0 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden">
         {heroBadges.map((badge) => (
-          <Pill key={badge} label={badge} variant="badge" />
+          <li key={badge} className="shrink-0">
+            <Pill label={badge} variant="badge" />
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

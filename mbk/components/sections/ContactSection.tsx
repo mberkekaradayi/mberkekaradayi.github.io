@@ -54,16 +54,16 @@ export function ContactSection() {
           </div>
 
           <nav
-            aria-label="Contact links"
-            className="flex flex-wrap items-center gap-x-[10px] gap-y-[6px] text-[13px] leading-snug tracking-normal md:justify-end"
+            aria-label="Email, LinkedIn, and GitHub"
+            className="flex flex-wrap items-center gap-x-1 gap-y-2 text-[13px] leading-snug tracking-normal md:justify-end md:gap-x-[12px] md:gap-y-1 md:whitespace-nowrap"
           >
             {contactLinks.map((link, idx) => (
               <Fragment key={link.href}>
                 {idx > 0 ? (
                   <span
                     aria-hidden
-                    className="select-none px-[2px]"
-                    style={{ color: "var(--color-p-muted)", opacity: 0.65 }}
+                    className="select-none px-1 md:px-2"
+                    style={{ color: "var(--color-p-muted)", opacity: 0.7 }}
                   >
                     ·
                   </span>

@@ -25,10 +25,10 @@ export function Navbar() {
       const root = overlayRef.current;
       if (!root) return [];
       const nodes = root.querySelectorAll<HTMLElement>(
-        'a[href], button:not([disabled])'
+        "a[href], button:not([disabled])",
       );
       return [...nodes].filter(
-        (el) => el.offsetParent !== null || el.getClientRects().length > 0
+        (el) => el.offsetParent !== null || el.getClientRects().length > 0,
       );
     };
 
@@ -90,6 +90,7 @@ export function Navbar() {
       >
         <a
           href="#home"
+          aria-label="Mehmet Berke Karadayi, back to introduction"
           className="min-w-0 flex-1 pr-3 font-sans text-[14px] font-medium leading-snug tracking-tight no-underline truncate sm:flex-initial md:text-[13px] md:overflow-visible md:whitespace-normal md:pr-6"
           title="Mehmet Berke Karadayi"
           style={{ color: "#7ab8fb" }}

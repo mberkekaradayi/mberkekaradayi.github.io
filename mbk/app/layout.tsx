@@ -24,7 +24,7 @@ const instrumentSerif = Instrument_Serif({
 const siteUrl = "https://mberkekaradayi.com";
 
 const seoDescription =
-  "Software Engineer focused on frontend architecture, real-time product systems, AI-assisted engineering workflows, and product-quality software.";
+  "Software Engineer at Coinbase focused on software architecture, real-time product systems, AI-assisted engineering workflows, and product-quality software.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -97,10 +97,7 @@ export default function RootLayout({
       className={`${dmSans.variable} ${dmMono.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <a
-          href="#main"
-          className="skip-link"
-        >
+        <a href="#main" className="skip-link">
           Skip to main content
         </a>
         {children}

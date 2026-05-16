@@ -36,7 +36,7 @@ export function Pill({ label, variant = "tech" }: PillProps) {
 
   return (
     <span
-      className="font-mono text-[12px] px-[11px] py-[5px] rounded-[5px] tracking-[0.025em]"
+      className="shrink-0 whitespace-nowrap font-mono text-[12px] px-[11px] py-[5px] rounded-[5px] tracking-[0.025em]"
       style={{
         border: "1px solid rgba(99,143,200,0.16)",
         color: "#c4d6e9",
