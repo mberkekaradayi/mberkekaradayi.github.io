@@ -27,13 +27,9 @@ export function SkillsSection() {
           >
             {/* Card title (mono accent) */}
             <div
-              className="mb-3 flex shrink-0 items-center gap-2 font-mono text-[11px] font-medium uppercase tracking-[0.08em]"
+              className="mb-3 shrink-0 font-mono text-[11px] font-medium uppercase tracking-[0.08em]"
               style={{ color: "#38d9c4" }}
             >
-              <span
-                className="h-px w-4 shrink-0 opacity-60"
-                style={{ background: "#38d9c4" }}
-              />
               {group.title}
             </div>
 

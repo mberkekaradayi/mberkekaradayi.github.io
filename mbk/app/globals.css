@@ -253,7 +253,7 @@
 
 /* Mobile nav overlay link (no JS hover) */
 .mobile-menu-link {
-  color: rgba(232, 238, 246, 0.78);
+  color: rgba(232, 238, 246, 0.88);
   transition: color 0.2s ease;
 }
 .mobile-menu-link:hover,
@@ -274,18 +274,6 @@
 
 .animate-fade-up {
   animation: fade-up 0.5s ease forwards;
-}
-
-/* Contact section top highlight */
-.contact-highlight::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #4f9cf8, transparent);
 }
 
 /* Hover utility: card with background + border */
@@ -350,20 +338,6 @@
   transform: translateY(-1px);
 }
 
-/* Hover utility: contact link */
-.contact-link-hover {
-  transition:
-    color 0.2s,
-    border-color 0.2s,
-    background 0.2s;
-}
-.contact-link-hover:hover {
-  color: #e8eef6 !important;
-  border-color: rgba(99, 143, 200, 0.35) !important;
-  background: rgba(255, 255, 255, 0.04) !important;
-}
-
-/* Hover utility: nav link */
 .nav-link-hover {
   transition: color 0.2s;
 }

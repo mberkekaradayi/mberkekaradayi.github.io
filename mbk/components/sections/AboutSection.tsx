@@ -36,8 +36,8 @@ export function AboutSection() {
             className="text-[15px] leading-[1.75]"
             style={{ color: "var(--color-p-muted)" }}
           >
-            I&apos;m a Software Engineer at Coinbase and an Electrical
-            Engineering graduate from the University of British Columbia, focused on
+            I&apos;m Mehmet Berke Karadayi, a Software Engineer at Coinbase and
+            an Electrical Engineering graduate from the University of British Columbia, focused on
             building reliable product systems across frontend, full-stack,
             real-time, and AI-assisted workflows.
           </p>

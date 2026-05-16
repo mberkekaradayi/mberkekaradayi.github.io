@@ -81,7 +81,7 @@ export function Navbar() {
       <nav
         className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 h-[60px]"
         style={{
-          background: "rgba(6,13,26,0.92)",
+          background: "rgba(6,13,26,0.96)",
           backdropFilter: "blur(12px)",
           WebkitBackdropFilter: "blur(12px)",
           borderBottom: "1px solid rgba(99,143,200,0.12)",
@@ -90,10 +90,11 @@ export function Navbar() {
       >
         <a
           href="#home"
-          className="font-mono text-[13px] font-medium tracking-[0.04em] no-underline"
-          style={{ color: "#4f9cf8" }}
+          className="min-w-0 flex-1 pr-3 font-sans text-[11.5px] font-medium leading-snug tracking-tight no-underline truncate sm:text-[12px] sm:flex-initial md:text-[13px] md:overflow-visible md:whitespace-normal md:pr-6"
+          title="Mehmet Berke Karadayi"
+          style={{ color: "#7ab8fb" }}
         >
-          MBK
+          Mehmet Berke Karadayi
         </a>
 
         <ul className="hidden md:flex items-center gap-8 list-none m-0 p-0">
@@ -102,7 +103,7 @@ export function Navbar() {
               <a
                 href={link.href}
                 className="nav-link-hover text-[13px] font-normal tracking-[0.02em] no-underline"
-                style={{ color: "var(--color-p-muted)" }}
+                style={{ color: "#c9dded" }}
               >
                 {link.label}
               </a>
@@ -116,7 +117,7 @@ export function Navbar() {
           id="mobile-menu-button"
           aria-controls={MOBILE_NAV_ID}
           className="md:hidden flex min-h-11 min-w-11 items-center justify-center rounded-md"
-          style={{ color: "var(--color-p-muted)" }}
+          style={{ color: "#c9dded" }}
           onClick={() => setMobileOpen((o) => !o)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}

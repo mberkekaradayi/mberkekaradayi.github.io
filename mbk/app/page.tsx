@@ -1,5 +1,4 @@
 import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
@@ -28,11 +27,9 @@ export default function Home() {
         <ProjectsSection />
         <Divider />
         <SkillsSection />
-        <Divider />
-        <ContactSection />
       </main>
 
-      <Footer />
+      <ContactSection />
     </div>
   );
 }
