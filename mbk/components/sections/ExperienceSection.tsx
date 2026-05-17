@@ -22,7 +22,8 @@ export function ExperienceSection() {
       <SectionHeader
         label="Experience"
         title="Professional history"
-        subtitle="Structured proof across frontend, full-stack, desktop, and AI-assisted engineering."
+        subtitle="Structured proof across frontend, full-stack, and AI-assisted engineering."
+        subtitleClassName="max-w-none md:whitespace-nowrap"
       />
 
       <div className="mt-8 flex flex-col gap-2.5">
