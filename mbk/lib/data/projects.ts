@@ -39,4 +39,19 @@ export const projects: Project[] = [
     githubUrl:
       "https://github.com/mberkekaradayi/Token-Dashboard-with-OnchainKit",
   },
+  {
+    type: "Product · Workflow",
+    title: "Job Application Tracker",
+    description:
+      "A product workflow app for tracking applications, surfacing dashboard insights, and managing status, priority, and follow-up actions across the job search process.",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Ruby on Rails",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "shadcn/ui",
+    ],
+    githubUrl: "https://github.com/mberkekaradayi/job-tracker-app",
+  },
 ];

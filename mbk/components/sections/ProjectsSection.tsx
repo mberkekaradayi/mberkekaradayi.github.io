@@ -15,7 +15,7 @@ export function ProjectsSection() {
         subtitle="A few technical projects—concise snapshots, not full case studies."
       />
 
-      <div className="mt-8 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-3 md:grid-cols-2">
         {projects.map((project) => (
           <article
             key={project.title}

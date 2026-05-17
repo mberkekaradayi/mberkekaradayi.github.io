@@ -18,7 +18,7 @@ export const capabilities: Capability[] = [
   },
   {
     title: "Backend Services",
-    items: "Node.js, Go, Django, PostgreSQL, AWS",
+    items: "Node.js, Go, Django, Ruby on Rails, PostgreSQL, AWS",
   },
   {
     title: "Reliability",
