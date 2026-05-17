@@ -1,11 +1,29 @@
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
-const factRows = [
+const UBC_FEATURE_URL =
+  "https://vantagecollege.ubc.ca/news/october-10-2025/meet-mehmet-vantage-one-engineering-alumni-and-basc-graduate-2025";
+
+type FactRow = {
+  label: string;
+  value: string;
+  href?: string;
+  linkLabel?: string;
+  linkAriaLabel?: string;
+};
+
+const factRows: FactRow[] = [
   { label: "Coinbase", value: "Software Engineer" },
-  { label: "UBC", value: "Electrical Engineering" },
   {
-    label: "Interests",
-    value: "Frontend architecture · Real-time systems · AI-assisted workflows",
+    label: "UBC",
+    value: "BASc, Electrical Engineering",
+  },
+  {
+    label: "Featured by UBC",
+    value: "UBC Engineering alumni feature",
+    href: UBC_FEATURE_URL,
+    linkLabel: "Read feature",
+    linkAriaLabel:
+      "Read UBC Engineering alumni feature: Meet Mehmet, BASc graduate of 2025 (opens in new tab)",
   },
 ];
 
@@ -56,11 +74,25 @@ export function AboutSection() {
               >
                 {row.label}
               </dt>
-              <dd
-                className="m-0 text-[14px] leading-[1.55]"
-                style={{ color: "#e8eef6" }}
-              >
-                {row.value}
+              <dd className="m-0">
+                <p
+                  className="text-[14px] leading-[1.55]"
+                  style={{ color: "#e8eef6" }}
+                >
+                  {row.value}
+                </p>
+                {row.href ? (
+                  <a
+                    href={row.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="nav-link-hover mt-1.5 inline-block text-[13px] leading-snug no-underline outline-offset-4"
+                    style={{ color: "#4f9cf8" }}
+                    aria-label={row.linkAriaLabel}
+                  >
+                    {row.linkLabel} →
+                  </a>
+                ) : null}
               </dd>
             </div>
           ))}
