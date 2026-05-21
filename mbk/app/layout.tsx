@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { DM_Sans, DM_Mono, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
@@ -96,6 +97,9 @@ export default function RootLayout({
       <body
         className={`${dmSans.variable} ${dmMono.variable} ${instrumentSerif.variable} min-h-full flex flex-col antialiased`}
       >
+        <Script id="strip-index-html" strategy="beforeInteractive">
+          {`(function(){var p=location.pathname;if(p==="/index.html"||p.endsWith("/index.html")){var t=p.replace(/\\/index\\.html$/,"")||"/";location.replace(t+location.search+location.hash);}})();`}
+        </Script>
         <a href="#main" className="skip-link">
           Skip to main content
         </a>
